@@ -15,6 +15,8 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Forci\Bundle\BannerBundle\Filter\BannerPositionFilter;
 use Wucdbm\Bundle\QuickUIBundle\Form\Filter\BaseFilterType;
+use Wucdbm\Bundle\QuickUIBundle\Form\Filter\ChoiceFilterType;
+use Wucdbm\Bundle\QuickUIBundle\Form\Filter\TextFilterType;
 
 class BannerPositionFilterType extends BaseFilterType {
 
@@ -24,14 +26,14 @@ class BannerPositionFilterType extends BaseFilterType {
      */
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
-            ->add('isActive', 'Wucdbm\Bundle\QuickUIBundle\Form\Filter\ChoiceFilterType', [
+            ->add('isActive', ChoiceFilterType::class, [
                 'placeholder' => 'Status',
                 'choices' => [
                     'Active' => BannerPositionFilter::IS_ACTIVE_TRUE,
                     'Inactive' => BannerPositionFilter::IS_ACTIVE_FALSE,
                 ],
             ])
-            ->add('name', 'Wucdbm\Bundle\QuickUIBundle\Form\Filter\TextFilterType', [
+            ->add('name', TextFilterType::class, [
                 'placeholder' => 'Name',
             ]);
     }
@@ -41,7 +43,7 @@ class BannerPositionFilterType extends BaseFilterType {
      */
     public function configureOptions(OptionsResolver $resolver) {
         $resolver->setDefaults([
-            'data_class' => 'Forci\Bundle\BannerBundle\Filter\BannerPositionFilter',
+            'data_class' => BannerPositionFilter::class,
         ]);
     }
 }

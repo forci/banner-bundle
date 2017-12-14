@@ -15,7 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="Forci\Bundle\BannerBundle\Repository\BannerRepository")
- * @ORM\Table(name="_wucdbm__banners",
+ * @ORM\Table(name="_forci__banners",
  *      options={"collate"="utf8_general_ci"},
  *      indexes={
  *          @ORM\Index(name="is_active", columns={"is_active"})

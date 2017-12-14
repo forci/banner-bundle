@@ -15,6 +15,8 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Forci\Bundle\BannerBundle\Filter\BannerFilter;
 use Wucdbm\Bundle\QuickUIBundle\Form\Filter\BaseFilterType;
+use Wucdbm\Bundle\QuickUIBundle\Form\Filter\ChoiceFilterType;
+use Wucdbm\Bundle\QuickUIBundle\Form\Filter\TextFilterType;
 
 class BannerFilterType extends BaseFilterType {
 
@@ -24,17 +26,17 @@ class BannerFilterType extends BaseFilterType {
      */
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
-            ->add('isActive', 'Wucdbm\Bundle\QuickUIBundle\Form\Filter\ChoiceFilterType', [
+            ->add('isActive', ChoiceFilterType::class, [
                 'placeholder' => 'Status',
                 'choices' => [
                     'Active' => BannerFilter::IS_ACTIVE_TRUE,
                     'Inactive' => BannerFilter::IS_ACTIVE_FALSE,
                 ],
             ])
-            ->add('id', 'Wucdbm\Bundle\QuickUIBundle\Form\Filter\TextFilterType', [
+            ->add('id', TextFilterType::class, [
                 'placeholder' => 'ID',
             ])
-            ->add('name', 'Wucdbm\Bundle\QuickUIBundle\Form\Filter\TextFilterType', [
+            ->add('name', TextFilterType::class, [
                 'placeholder' => 'Name',
             ]);
     }

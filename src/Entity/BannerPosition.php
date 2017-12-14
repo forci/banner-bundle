@@ -15,7 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="Forci\Bundle\BannerBundle\Repository\BannerPositionRepository")
- * @ORM\Table(name="_wucdbm__banners_positions",
+ * @ORM\Table(name="_forci__banners_positions",
  *      options={"collate"="utf8_general_ci"},
  *      uniqueConstraints={
  *          @ORM\UniqueConstraint(name="name", columns={"name"})
