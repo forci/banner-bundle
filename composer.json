@@ -1,7 +1,7 @@
 {
     "name": "forci/banner-bundle",
     "type": "symfony-bundle",
-    "description": "A simple banner manager Symfony2",
+    "description": "A simple banner manager Symfony3/4",
     "keywords": [
         "wucdbm",
         "forci",
