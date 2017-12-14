@@ -1,0 +1,16 @@
+{% block forci_banner_example %}
+    <p>This is a link to the banner UI</p>
+    <p>
+        <a href="{{ path('forci_banner_dashboard') }}" class="btn btn-primary" target="_blank">
+            Banner Bundle
+        </a>
+    </p>
+    <hr>
+    <p>This is how you place a banner, it will ask you to create a position and assign a banner if these do not exist.</p>
+    {{ 'randomPositionName'|banner }}
+    <hr>
+    <p>And this is how you show all the positions that exist on a page. Please beware that you will first get warnings that a position does not exist or does not have a banner setup yet before replacing banners with position information.</p>
+    <a href="{{ showBannerPositionsUrl() }}">
+        Show positions
+    </a>
+{% endblock %}

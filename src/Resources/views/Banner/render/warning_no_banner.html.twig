@@ -1,0 +1,12 @@
+{% if is_granted('ROLE_ADMIN') %}
+    <div style="color:red; padding: 10px;">
+        <h2 class="no-margin">Position "{{ position.name }}" has no banner</h2>
+
+        <p>
+            <a href="{{ path('forci_banner_choice_choose', {id: position.id}) }}" class="btn btn-danger btn-sm" target="_blank">
+                <i class="fa fa-exclamation-triangle"></i>
+                Choose Banner
+            </a>
+        </p>
+    </div>
+{% endif %}

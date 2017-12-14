@@ -1,0 +1,31 @@
+forci_banner_banner_list:
+      path:      /list
+      defaults:  { _controller: Forci\Bundle\BannerBundle\Controller\BannerController::listAction }
+
+forci_banner_banner_edit:
+      path:      /{id}/edit
+      defaults:  { _controller: Forci\Bundle\BannerBundle\Controller\BannerController::editAction }
+
+forci_banner_banner_create:
+      path:      /new
+      defaults:  { _controller: Forci\Bundle\BannerBundle\Controller\BannerController::createAction }
+
+forci_banner_banner_preview:
+      path:      /{id}/preview
+      defaults:  { _controller: Forci\Bundle\BannerBundle\Controller\BannerController::previewAction }
+
+forci_banner_banner_activate:
+      path:      /{id}/activate
+      defaults:  { _controller: Forci\Bundle\BannerBundle\Controller\BannerController::activateAction }
+
+forci_banner_banner_deactivate:
+      path:      /{id}/deactivate
+      defaults:  { _controller: Forci\Bundle\BannerBundle\Controller\BannerController::deactivateAction }
+
+forci_banner_banner_refresh:
+      path:      /{id}/refresh
+      defaults:  { _controller: Forci\Bundle\BannerBundle\Controller\BannerController::refreshAction }
+
+forci_banner_banner_delete:
+      path:      /{id}/delete
+      defaults:  { _controller: Forci\Bundle\BannerBundle\Controller\BannerController::deleteAction }

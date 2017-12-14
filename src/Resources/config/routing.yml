@@ -1,0 +1,15 @@
+forci_banner_dashboard:
+    path:        /
+    defaults:    { _controller: Forci\Bundle\BannerBundle\Controller\DashboardController::dashboardAction }
+
+forci_banner_banner:
+    resource: routing/banner.yml
+    prefix: /banners
+
+forci_banner_banner_choice:
+    resource: routing/banner_choice.yml
+    prefix: /banners/choice
+
+forci_banner_banner_position:
+    resource: routing/banner_position.yml
+    prefix: /banners/positions

@@ -1,0 +1,21 @@
+{% extends '@ForciBanner/Banner/base.html.twig' %}
+
+{% block content %}
+    {% include '@ForciBanner/Banner/form.html.twig' %}
+{% endblock %}
+
+{% block breadcrumb %}
+    {{ parent() }}
+    <li>
+        #{{ banner.id }}
+    </li>
+    <li>
+        Edit
+    </li>
+    <li class="pull-right">
+        <a href="{{ path('forci_banner_banner_preview', {id: banner.id}) }}" class="ajax-action">
+            <i class="fa fa-search"></i>
+            Preview
+        </a>
+    </li>
+{% endblock %}

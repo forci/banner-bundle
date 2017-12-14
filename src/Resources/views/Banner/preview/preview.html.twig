@@ -1,0 +1,31 @@
+{% extends '@ForciBanner/Banner/base.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Preview Banner <em>{{ banner.name }}</em></h3>
+            <hr>
+            {{ banner.content|raw }}
+            <hr>
+            <div class="alert alert-info">
+                The banner preview is inbetween the horizontal rulers!
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block breadcrumb %}
+    {{ parent() }}
+    <li>
+        #{{ banner.id }}
+    </li>
+    <li>
+        Preview
+    </li>
+    <li class="pull-right">
+        <a href="{{ path('forci_banner_banner_edit', {id: banner.id}) }}">
+            <i class="fa fa-edit"></i>
+            Edit
+        </a>
+    </li>
+{% endblock %}

@@ -1,0 +1,35 @@
+{
+    "name": "forci/banner-bundle",
+    "type": "symfony-bundle",
+    "description": "A simple banner manager Symfony2",
+    "keywords": [
+        "wucdbm",
+        "forci",
+        "banner bundle"
+    ],
+    "authors": [
+        {
+            "name": "Martin Kirilov",
+            "email": "wucdbm@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.3",
+        "symfony/symfony": "~3.4|~4.0",
+        "wucdbm/quick-ui-bundle": "~0.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.8",
+        "wucdbm/php-cs-fixers": "~0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Forci\\Bundle\\BannerBundle\\": "src"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "license": "GPL-3.0"
+}

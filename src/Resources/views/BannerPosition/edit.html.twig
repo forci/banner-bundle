@@ -1,0 +1,15 @@
+{% extends '@ForciBanner/BannerPosition/base.html.twig' %}
+
+{% block content %}
+    {% include '@ForciBanner/BannerPosition/form.html.twig' %}
+{% endblock %}
+
+{% block breadcrumb %}
+    {{ parent() }}
+    <li>
+        #{{ position.id }}
+    </li>
+    <li>
+        Edit
+    </li>
+{% endblock %}

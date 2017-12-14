@@ -1,0 +1,31 @@
+<td>
+    #{{ banner.id }}
+</td>
+<td>
+    <a href="{{ path('forci_banner_banner_edit', {id : banner.id}) }}">
+        {{ banner.name }}
+    </a>
+</td>
+<td>
+    {% if banner.isActive %}
+        <a href="{{ path('forci_banner_banner_deactivate', {id : banner.id}) }}" class="ajax-action btn btn-success">
+            <i class="fa fa-check"></i>
+            Active
+        </a>
+    {% else %}
+        <a href="{{ path('forci_banner_banner_activate', {id : banner.id}) }}" class="ajax-action btn btn-danger">
+            <i class="fa fa-times"></i>
+            Inactive
+        </a>
+    {% endif %}
+</td>
+<td>
+    <a href="{{ path('forci_banner_banner_preview', {id : banner.id}) }}" class="btn btn-primary ajax-action">
+        Preview
+    </a>
+</td>
+<td>
+    <a href="{{ path('forci_banner_banner_delete', {id : banner.id}) }}" data-confirm="Should Banner {{ banner.name }} be deleted?" class="btn btn-danger btn-sm" rel="tooltip" title="Remove">
+        <i class="fa fa-times"></i>
+    </a>
+</td>

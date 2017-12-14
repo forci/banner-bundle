@@ -1,0 +1,7 @@
+forci_banner_choice_choose:
+      path:      /positions/choose
+      defaults:  { _controller: Forci\Bundle\BannerBundle\Controller\BannerChoiceController::chooseAction }
+
+forci_banner_choice_update_banner:
+      path:      /positions/{id}/update/banner
+      defaults:  { _controller: Forci\Bundle\BannerBundle\Controller\BannerChoiceController::updatePositionBannerAction }

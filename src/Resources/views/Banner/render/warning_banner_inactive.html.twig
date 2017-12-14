@@ -1,0 +1,12 @@
+{% if is_granted('ROLE_ADMIN') %}
+    <div style="color:red; padding: 10px;">
+        <h2 class="no-margin">Banner at "{{ position.name }}" is inactive.</h2>
+
+        <p>
+            <a href="{{ path('forci_banner_banner_list', {id: position.banner.id}) }}" class="btn btn-danger btn-sm" target="_blank">
+                <i class="fa fa-exclamation-triangle"></i>
+                Activate
+            </a>
+        </p>
+    </div>
+{% endif %}

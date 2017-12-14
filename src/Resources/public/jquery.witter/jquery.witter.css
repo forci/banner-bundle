@@ -1,0 +1,155 @@
+#witter-wrappers div.wrapper {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 301px;
+    z-index: 9999;
+}
+
+#witter-wrappers div.top-right {
+    top: 15px;
+    right: 15px;
+    bottom: auto;
+    left: auto;
+}
+
+#witter-wrappers div.bottom-right {
+    top: auto;
+    left: auto;
+    bottom: 15px;
+    right: 15px;
+}
+
+#witter-wrappers div.bottom-left {
+    top: auto;
+    right: auto;
+    bottom: 15px;
+    left: 15px;
+}
+
+#witter-wrappers div.top-left {
+    top: 15px;
+    right: auto;
+    bottom: auto;
+    left: 15px;
+}
+
+#witter-wrappers div.top {
+    top: 15px;
+    right: 15px;
+    bottom: auto;
+    left: 15px;
+    width: auto;
+}
+
+#witter-wrappers div.bottom {
+    top: auto;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    width: auto;
+}
+
+.witter-item-wrapper {
+    position: relative;
+    margin: 0 0 10px 0;
+}
+
+.witter-item {
+    display: block;
+    border-radius: 10px;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.witter-item-wrapper.html .witter-item {
+    color: #eee;
+}
+
+.witter-item-wrapper.dark .witter-item-simple {
+    display: block;
+    border-radius: 10px;
+    padding: 8px;
+    margin: -8px;
+    font-family: "Open Sans", sans-serif;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.witter-item-wrapper.dark .witter-item-simple:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.witter-item-wrapper.dark .witter-item-simple {
+    background: rgba(9, 14, 22, 0.75);
+}
+
+.witter-top {
+    margin: 0;
+}
+
+.witter-bottom {
+    margin: 0;
+}
+
+.witter-item p {
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.witter-item:hover .witter-close {
+    display: block;
+}
+
+.witter-close {
+    display: none;
+    position: absolute;
+    padding: 0 5px 5px 5px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    line-height: 16px;
+    opacity: 0.9;
+    transition: opacity 0.25s, text-shadow 0.25s;
+    -webkit-transition: opacity 0.25s, text-shadow 0.25s;
+    -moz-transition: opacity 0.25s, text-shadow 0.25s;
+    -o-transition: opacity 0.25s, text-shadow 0.25s;
+}
+
+.witter-close, .witter-close:hover, .witter-close:active, .witter-close:focus {
+    color: white;
+}
+
+.witter-close:hover {
+    display: block;
+    text-shadow: 2px 2px 20px #fff, -2px -2px 20px #fff, -2px 2px 20px #fff, 2px -2px 20px #fff;
+    opacity: 1;
+    text-decoration: none;
+    transition: opacity 0.25s, text-shadow 0.25s;
+    -webkit-transition: opacity 0.25s, text-shadow 0.25s;
+    -moz-transition: opacity 0.25s, text-shadow 0.25s;
+    -o-transition: opacity 0.25s, text-shadow 0.25s;
+}
+
+.witter-title {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0;
+    display: block;
+    text-shadow: 1px 1px 0 #000;
+    line-height: 21px;
+    vertical-align: top;
+}
+
+.witter-image {
+    width: 64px;
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}

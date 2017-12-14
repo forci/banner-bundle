@@ -1,0 +1,27 @@
+body {
+    padding-top: 70px;
+}
+
+.filter-form {
+    margin-bottom: 15px;
+}
+
+.select2-container .select2-selection--single {
+    height: 34px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 32px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 32px;
+}
+
+.table > thead:first-child > tr:first-child > th {
+    border-bottom: 0;
+}
+
+.mfp-content .container {
+    background: #fff;
+}

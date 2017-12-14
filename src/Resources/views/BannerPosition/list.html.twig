@@ -1,0 +1,52 @@
+{% extends '@ForciBanner/BannerPosition/base.html.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            {% form_theme filterForm '@ForciBanner/_shared/form/filter_theme.html.twig' %}
+            {{ form(filterForm) }}
+
+            {% if positions is not empty %}
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-striped table-condensed flip-content">
+                        <thead class="flip-content">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Banner</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for position in positions %}
+                            <tr data-refresh="{{ path('forci_banner_position_refresh', {id : position.id}) }}">
+                                {% include '@ForciBanner/BannerPosition/list_row.html.twig' %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            {% else %}
+                <div class="alert alert-danger">
+                    No positions found
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row">
+        {% include '@ForciBanner/_shared/pagination.html.twig' %}
+    </div>
+
+{% endblock %}
+
+{% block breadcrumb %}
+    {{ parent() }}
+    <li>
+        List
+    </li>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends '@ForciBanner/layout.html.twig' %}
+
+{% block breadcrumb %}
+    <li>
+        <a href="{{ path('forci_banner_banner_list') }}">
+            <i class="fa fa-money"></i>
+            Banners
+        </a>
+    </li>
+    <li class="pull-right">
+        <a href="{{ path('forci_banner_banner_create') }}">
+            <i class="fa fa-plus"></i>
+            Create
+        </a>
+    </li>
+{% endblock %}

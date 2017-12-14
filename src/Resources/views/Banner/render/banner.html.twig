@@ -1,0 +1,17 @@
+{% if is_granted('ROLE_ADMIN') and debug %}
+    <div style="border: 1px solid red; color:red; padding: 10px;">
+        <h3 class="no-margin">"{{ position.name }}"</h3>
+        <p><b>{{ position.description }}</b></p>
+        <p>Active Banner: <b>{{ position.banner.name }}</b></p>
+        <p>
+            <a href="{{ path('forci_banner_choice_choose', {id: position.id}) }}" class="btn btn-primary btn-sm" target="_blank">
+                <i class="fa fa-cogs"></i>
+                Choose Banner
+            </a>
+        </p>
+    </div>
+{% else %}
+    {% autoescape false %}
+        {{ position.banner.content }}
+    {% endautoescape %}
+{% endif %}
