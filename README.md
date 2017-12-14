@@ -32,3 +32,6 @@ If you need cache: Alias your own `Psr\Cache\CacheItemPoolInterface` to `forci_b
 
 `<service id="forci_banner.cache" alias="app.cache" />` where the `app.cache` service is an instance of `Psr\Cache\CacheItemPoolInterface`
 
+# TODO
+
+- Tests!
