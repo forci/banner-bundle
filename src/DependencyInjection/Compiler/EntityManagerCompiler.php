@@ -21,7 +21,8 @@ class EntityManagerCompiler implements CompilerPassInterface {
         $factoryId = sprintf('doctrine.orm.%s_entity_manager', $managerName);
 
         if (!$container->has($factoryId)) {
-            return;
+            // TODO Figure out a better Exception to throw?
+            throw new \Exception(sprintf('Entity Manager "%s" does not exist', $managerName));
         }
 
         $container->setAlias('forci_banner.entity_manager', $factoryId);
