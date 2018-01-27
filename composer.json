@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": ">=7.1.3",
-        "symfony/symfony": "~3.4|~4.0",
+        "symfony/framework-bundle": "~3.4|~4.0",
         "wucdbm/quick-ui-bundle": "~0.3"
     },
     "require-dev": {
